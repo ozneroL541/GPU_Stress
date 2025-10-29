@@ -13,7 +13,7 @@ A program to stress NVIDIA GPU as much as possible
  - [License](#license)
 
 ## Description
-This program is based on the simulation program [GPU_Stress](#https://github.com/ozneroL541/GPU_Stress.git).
+This program is based on the simulation program [Perfect_Numbers](#https://github.com/ozneroL541/Perfect_Numbers.git).
 
 ## Download
 Download the source code from Github
