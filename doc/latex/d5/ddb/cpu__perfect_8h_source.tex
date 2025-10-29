@@ -1,0 +1,24 @@
+\doxysection{cpu\+\_\+perfect.\+h}
+\hypertarget{cpu__perfect_8h_source}{}\label{cpu__perfect_8h_source}\index{include/cpu\_perfect.h@{include/cpu\_perfect.h}}
+\mbox{\hyperlink{cpu__perfect_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_CPU\_PERFECT\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_CPU\_PERFECT\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ \_PERFECT\_NUMBER\_H\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{perfect__number_8h}{perfect\_number.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{cpu__perfect_8h_a6204d3af5cf591263f70a38421ba5be8}{max\_threads}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{cpu__perfect_8h_a8801b7b828c692cece50c93bf74d8e81}{is\_perfect\_t}}(\textcolor{keywordtype}{void}\ *arg);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{cpu__perfect_8h_ac75f2df49aceea06a0c2e4489e65b841}{init\_perfect\_threads}}(pthread\_t*\ threads,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ thread\_count,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ *\ numbers);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{cpu__perfect_8h_a710b787b452817a63b65281ed1957c61}{join\_perfect\_threads}}(pthread\_t*\ threads,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ thread\_count);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{cpu__perfect_8h_a2bfd4a887d3bc7d757e9e947109a8ad8}{manage\_perfect\_threads}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ first\_number,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ thread\_count);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cpu__perfect_8h_a6fba4470d5ab9df1701f36f8efd7eacc}{search\_perfect\_numbers}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

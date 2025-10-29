@@ -1,0 +1,49 @@
+\chapter{README }
+\hypertarget{md_README}{}\label{md_README}\index{README@{README}}
+\href{https://github.com/ozneroL541/GPU_Stress/blob/master/LICENSE}{\texttt{}}\hypertarget{md_README_autotoc_md0}{}\doxysection{\texorpdfstring{GPU\+\_\+\+Stress}{GPU\+\_\+\+Stress}}\label{md_README_autotoc_md0}
+A program to stress NVIDIA GPU as much as possible\hypertarget{md_README_autotoc_md1}{}\doxysubsection{\texorpdfstring{Index}{Index}}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Description
+\item Download
+\item Compilation
+\item Execution
+\item Documentation
+\item Author
+\item License
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{md_README_autotoc_md2}
+This program is based on the simulation program GPU\+\_\+\+Stress.\hypertarget{md_README_autotoc_md3}{}\doxysubsection{\texorpdfstring{Download}{Download}}\label{md_README_autotoc_md3}
+Download the source code from Github \begin{DoxyVerb}git clone https://github.com/ozneroL541/GPU_Stress.git
+\end{DoxyVerb}
+\hypertarget{md_README_autotoc_md4}{}\doxysubsection{\texorpdfstring{Compilation}{Compilation}}\label{md_README_autotoc_md4}
+\hypertarget{md_README_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Requirements}{Requirements}}\label{md_README_autotoc_md5}
+To compile this program you need a make utility and a C compiler beetween Intel one\+API DPC++/\+C++ Compiler and GNU Compiler Collection. \begin{quote}
+By default the make file will use {\bfseries{ICX}} if avaiable, otherwise {\bfseries{GCC}} will be used. \end{quote}
+
+
+To compile run\+: \begin{DoxyVerb} make -f Makefile.cuda -j$(nproc)
+\end{DoxyVerb}
+\hypertarget{md_README_autotoc_md6}{}\doxysubsection{\texorpdfstring{Execution}{Execution}}\label{md_README_autotoc_md6}
+To execute the program on Posix Operative Systems run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin/perfect\_cu}
+
+\end{DoxyCode}
+ On Windows run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin/perfect\_cu.exe}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md7}{}\doxysubsection{\texorpdfstring{Documentation}{Documentation}}\label{md_README_autotoc_md7}
+To document this software use\+: \begin{DoxyVerb}doxygen docfile
+\end{DoxyVerb}
+\hypertarget{md_README_autotoc_md8}{}\doxysubsection{\texorpdfstring{Author}{Author}}\label{md_README_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Radice Lorenzo @oznero\+L541
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysubsection{\texorpdfstring{License}{License}}\label{md_README_autotoc_md9}
+GPU\+\_\+\+Stress is free software\+: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+GPU\+\_\+\+Stress is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with GPU\+\_\+\+Stress. If not, see \href{http://www.gnu.org/licenses/}{\texttt{http\+://www.\+gnu.\+org/licenses/}}. 

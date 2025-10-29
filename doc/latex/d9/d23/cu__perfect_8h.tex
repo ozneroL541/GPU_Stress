@@ -1,0 +1,72 @@
+\doxysection{include/cu\+\_\+perfect.h File Reference}
+\hypertarget{cu__perfect_8h}{}\label{cu__perfect_8h}\index{include/cu\_perfect.h@{include/cu\_perfect.h}}
+{\ttfamily \#include "{}perfect\+\_\+number.\+h"{}}\newline
+{\ttfamily \#include $<$cuda\+\_\+runtime.\+h$>$}\newline
+{\ttfamily \#include $<$curand\+\_\+kernel.\+h$>$}\newline
+Include dependency graph for cu\+\_\+perfect.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d40/cu__perfect_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \mbox{\hyperlink{cu__perfect_8h_a20e960d6cf3b16f848631e9d3883fb66}{get\+\_\+cuda\+\_\+threads}} (void)
+\item 
+unsigned short \mbox{\hyperlink{cu__perfect_8h_ae195fba1a2f1c9d422e58453a98a9d97}{get\+\_\+cuda\+\_\+blocks}} (void)
+\item 
+char \mbox{\hyperlink{cu__perfect_8h_a24ee30b197138fec15d8cf9cfecdd811}{manage\+\_\+perfect\+\_\+cuda}} (unsigned long long first\+\_\+number, const unsigned short thread\+\_\+count, const unsigned short block\+\_\+count)
+\item 
+void \mbox{\hyperlink{cu__perfect_8h_a6fba4470d5ab9df1701f36f8efd7eacc}{search\+\_\+perfect\+\_\+numbers}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{cu__perfect_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{cu__perfect_8h_ae195fba1a2f1c9d422e58453a98a9d97}\index{cu\_perfect.h@{cu\_perfect.h}!get\_cuda\_blocks@{get\_cuda\_blocks}}
+\index{get\_cuda\_blocks@{get\_cuda\_blocks}!cu\_perfect.h@{cu\_perfect.h}}
+\doxysubsubsection{\texorpdfstring{get\_cuda\_blocks()}{get\_cuda\_blocks()}}
+{\footnotesize\ttfamily \label{cu__perfect_8h_ae195fba1a2f1c9d422e58453a98a9d97} 
+unsigned short get\+\_\+cuda\+\_\+blocks (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Returns the number of CUDA blocks available. \begin{DoxyReturn}{Returns}
+The number of CUDA blocks. 
+\end{DoxyReturn}
+\Hypertarget{cu__perfect_8h_a20e960d6cf3b16f848631e9d3883fb66}\index{cu\_perfect.h@{cu\_perfect.h}!get\_cuda\_threads@{get\_cuda\_threads}}
+\index{get\_cuda\_threads@{get\_cuda\_threads}!cu\_perfect.h@{cu\_perfect.h}}
+\doxysubsubsection{\texorpdfstring{get\_cuda\_threads()}{get\_cuda\_threads()}}
+{\footnotesize\ttfamily \label{cu__perfect_8h_a20e960d6cf3b16f848631e9d3883fb66} 
+unsigned short get\+\_\+cuda\+\_\+threads (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Returns the maximum number of concurrent threads supported by the system. \begin{DoxyReturn}{Returns}
+The maximum number of concurrent threads. 
+\end{DoxyReturn}
+\Hypertarget{cu__perfect_8h_a24ee30b197138fec15d8cf9cfecdd811}\index{cu\_perfect.h@{cu\_perfect.h}!manage\_perfect\_cuda@{manage\_perfect\_cuda}}
+\index{manage\_perfect\_cuda@{manage\_perfect\_cuda}!cu\_perfect.h@{cu\_perfect.h}}
+\doxysubsubsection{\texorpdfstring{manage\_perfect\_cuda()}{manage\_perfect\_cuda()}}
+{\footnotesize\ttfamily \label{cu__perfect_8h_a24ee30b197138fec15d8cf9cfecdd811} 
+char manage\+\_\+perfect\+\_\+cuda (\begin{DoxyParamCaption}\item[{unsigned long long}]{first\+\_\+number}{, }\item[{const unsigned short}]{thread\+\_\+count}{, }\item[{const unsigned short}]{block\+\_\+count}{}\end{DoxyParamCaption})}
+
+Manages the creation, execution, and destruction of CUDA threads for checking perfect numbers. 
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+number} & First number to be checked. \\
+\hline
+{\em thread\+\_\+count} & Number of CUDA threads to create. \\
+\hline
+{\em block\+\_\+count} & Number of CUDA blocks to create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{cu__perfect_8h_a6fba4470d5ab9df1701f36f8efd7eacc}\index{cu\_perfect.h@{cu\_perfect.h}!search\_perfect\_numbers@{search\_perfect\_numbers}}
+\index{search\_perfect\_numbers@{search\_perfect\_numbers}!cu\_perfect.h@{cu\_perfect.h}}
+\doxysubsubsection{\texorpdfstring{search\_perfect\_numbers()}{search\_perfect\_numbers()}}
+{\footnotesize\ttfamily \label{cu__perfect_8h_a6fba4470d5ab9df1701f36f8efd7eacc} 
+void search\+\_\+perfect\+\_\+numbers (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Searches for perfect numbers. 

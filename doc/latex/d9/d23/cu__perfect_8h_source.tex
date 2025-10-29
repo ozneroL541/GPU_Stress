@@ -1,0 +1,21 @@
+\doxysection{cu\+\_\+perfect.\+h}
+\hypertarget{cu__perfect_8h_source}{}\label{cu__perfect_8h_source}\index{include/cu\_perfect.h@{include/cu\_perfect.h}}
+\mbox{\hyperlink{cu__perfect_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_CU\_PERFECT\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_CU\_PERFECT\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ \_PERFECT\_NUMBER\_H\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{perfect__number_8h}{perfect\_number.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cuda\_runtime.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <curand\_kernel.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{cu__perfect_8h_a20e960d6cf3b16f848631e9d3883fb66}{get\_cuda\_threads}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{cu__perfect_8h_ae195fba1a2f1c9d422e58453a98a9d97}{get\_cuda\_blocks}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{cu__perfect_8h_a24ee30b197138fec15d8cf9cfecdd811}{manage\_perfect\_cuda}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ first\_number,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ thread\_count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ block\_count);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cu__perfect_8h_a6fba4470d5ab9df1701f36f8efd7eacc}{search\_perfect\_numbers}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
