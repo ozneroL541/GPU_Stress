@@ -1,0 +1,45 @@
+BIN=bin
+NVCC=nvcc
+CUDA_FLAGS=-O3 -arch=sm_75 --use_fast_math -Xptxas -O3 --ptxas-options=-v -rdc=true
+CUDA_FLAGS += -Iinclude
+CUDA_FLAGS += -DCUDA_SAFE_CALL -DCUDA_ERROR_CHECK
+_SRC = src_cu
+
+# Output directories
+BIN_DIR ?= $(BIN)
+OBJ_DIR ?= obj_cu
+
+# Source and object files
+CU_SOURCES := $(wildcard $(_SRC)/*.cu)
+CU_OBJECTS := $(patsubst $(_SRC)/%.cu,$(OBJ_DIR)/%.o,$(CU_SOURCES))
+
+# Target executable
+TARGET := $(BIN_DIR)/perfect_cu
+
+.PHONY: all cuda clean dirs
+all: cuda
+
+cuda: dirs $(TARGET)
+
+
+dirs:
+	@mkdir -p $(BIN_DIR) $(OBJ_DIR)
+
+$(OBJ_DIR)/%.o: $(_SRC)/%.cu
+	$(NVCC) $(CUDA_FLAGS) -c $< -o $@
+
+$(TARGET): $(CU_OBJECTS)
+	$(NVCC) $(CUDA_FLAGS) $^ -o $@
+
+clean:
+	rm -rf $(OBJ_DIR) $(BIN_DIR)/perfect_cu
+
+
+# Detect GPU architecture automatically if nvcc is available
+NVCC_EXISTS := $(shell command -v nvcc 2>/dev/null)
+ifneq ($(NVCC_EXISTS),)
+    GPU_ARCH := $(shell nvidia-smi --query-gpu=compute_cap --format=csv,noheader,nounits | head -1 | tr -d '.')
+    ifneq ($(GPU_ARCH),)
+        CUDA_FLAGS := $(filter-out -arch=sm_75,$(CUDA_FLAGS)) -arch=sm_$(GPU_ARCH)
+    endif
+endif
