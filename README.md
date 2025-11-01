@@ -1,7 +1,7 @@
 <a href="https://github.com/ozneroL541/GPU_Stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ozneroL541/GPU_Stress?color=2b9348" alt="License"/></a>
 
 # GPU_Stress
-A program to stress NVIDIA GPU as much as possible
+A program to stress NVIDIA GPU as much as possible using CUDA.
 
 ## Index
  - [Description](#description)
