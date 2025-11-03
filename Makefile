@@ -1,6 +1,6 @@
 BIN=bin
 NVCC=nvcc
-CUDA_FLAGS=-O3 -arch=sm_75 --use_fast_math -Xptxas -O3 --ptxas-options=-v -rdc=true
+CUDA_FLAGS=-O3 -arch=sm_75 --use_fast_math -Xptxas -O3 --ptxas-options=-v -rdc=true -allow-unsupported-compiler
 CUDA_FLAGS += -Iinclude
 CUDA_FLAGS += -DCUDA_SAFE_CALL -DCUDA_ERROR_CHECK
 _SRC = src_cu
@@ -14,7 +14,7 @@ CU_SOURCES := $(wildcard $(_SRC)/*.cu)
 CU_OBJECTS := $(patsubst $(_SRC)/%.cu,$(OBJ_DIR)/%.o,$(CU_SOURCES))
 
 # Target executable
-TARGET := $(BIN_DIR)/perfect_cu
+TARGET := $(BIN_DIR)/gpu_stress
 
 .PHONY: all cuda clean dirs
 all: cuda
@@ -22,8 +22,16 @@ all: cuda
 cuda: dirs $(TARGET)
 
 
+ifeq ($(OS),Windows_NT)
+    MKDIR_P = if not exist "$(1)" mkdir "$(1)"
+else
+    MKDIR_P = mkdir -p $(1)
+endif
+
 dirs:
-	@mkdir -p $(BIN_DIR) $(OBJ_DIR)
+	@echo Creating directories...
+	$(call MKDIR_P,$(BIN_DIR))
+	$(call MKDIR_P,$(OBJ_DIR))
 
 $(OBJ_DIR)/%.o: $(_SRC)/%.cu
 	$(NVCC) $(CUDA_FLAGS) -c $< -o $@

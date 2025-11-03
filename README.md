@@ -22,21 +22,21 @@ Download the source code from Github
 
 ## Compilation
 ### Requirements
-To compile this program you need a [make](#https://directory.fsf.org/wiki/Make/) utility and a C compiler beetween [Intel oneAPI DPC++/C++ Compiler](#https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/dpc-compiler.html) and [GNU Compiler Collection](#https://gcc.gnu.org/).
+To compile this program you need a [make](#https://directory.fsf.org/wiki/Make/) utility, a C compiler beetween [Intel oneAPI DPC++/C++ Compiler](#https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/dpc-compiler.html) and [GNU Compiler Collection](#https://gcc.gnu.org/) and [CUDA Toolkit](#https://developer.nvidia.com/cuda-downloads).
 > By default the make file will use **ICX** if avaiable, otherwise **GCC** will be used.
 
 To compile run:
 
-     make -f Makefile.cuda -j$(nproc)
+    make
 
 ## Execution
 To execute the program on Posix Operative Systems run:
 ```
-bin/perfect_cu
+bin/gpu_stress
 ```
 On Windows run:
 ```
-bin/perfect_cu.exe
+.\bin\gpu_stress.exe
 ```
 
 
