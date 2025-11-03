@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_0',['License',['../d0/d30/md_README.html#autotoc_md9',1,'']]]
+  ['manage_5fperfect_5fcuda_0',['manage_perfect_cuda',['../d9/d23/cu__perfect_8h.html#a24ee30b197138fec15d8cf9cfecdd811',1,'cu_perfect.h']]]
 ];

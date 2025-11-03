@@ -77,7 +77,7 @@ $(function() {
 <div class="textblock"><p><a href="https://github.com/ozneroL541/GPU_Stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ozneroL541/GPU_Stress?color=2b9348" alt="License" class="inline"/></a></p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
 GPU_Stress</h1>
-<p>A program to stress NVIDIA GPU as much as possible</p>
+<p>A program to stress NVIDIA GPU as much as possible using CUDA.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Index</h2>
 <ul>
@@ -91,7 +91,7 @@ Index</h2>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Description</h2>
-<p>This program is based on the simulation program GPU_Stress.</p>
+<p>This program is based on the simulation program Perfect_Numbers.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Download</h2>
 <p>Download the source code from Github </p><pre class="fragment">git clone https://github.com/ozneroL541/GPU_Stress.git
@@ -99,14 +99,14 @@ Download</h2>
 Compilation</h2>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Requirements</h3>
-<p>To compile this program you need a make utility and a C compiler beetween Intel oneAPI DPC++/C++ Compiler and GNU Compiler Collection. </p><blockquote class="doxtable">
+<p>To compile this program you need a make utility, a C compiler beetween Intel oneAPI DPC++/C++ Compiler and GNU Compiler Collection and CUDA Toolkit. </p><blockquote class="doxtable">
 <p>By default the make file will use <b>ICX</b> if avaiable, otherwise <b>GCC</b> will be used. </p>
 </blockquote>
-<p>To compile run: </p><pre class="fragment"> make -f Makefile.cuda -j$(nproc)
+<p>To compile run: </p><pre class="fragment">make
 </pre><h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Execution</h2>
-<p>To execute the program on Posix Operative Systems run: </p><div class="fragment"><div class="line">bin/perfect_cu</div>
-</div><!-- fragment --><p> On Windows run: </p><div class="fragment"><div class="line">bin/perfect_cu.exe</div>
+<p>To execute the program on Posix Operative Systems run: </p><div class="fragment"><div class="line">bin/gpu_stress</div>
+</div><!-- fragment --><p> On Windows run: </p><div class="fragment"><div class="line">.\bin\gpu_stress.exe</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Documentation</h2>
 <p>To document this software use: </p><pre class="fragment">doxygen docfile
